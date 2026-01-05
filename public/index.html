@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup and mobile layout support -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title shown in the browser tab -->
+  <title>Of The World Exotic Fruit Inc</title>
+
+  <!-- Custom font used for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Shared application styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Main page heading -->
+  <h1>Of The World Exotic Fruit Inc</h1>
+
+  <!-- Link to client management dashboard -->
+  <nav class="admin-link">
+    <a href="/database/FrontEnd Exotic Fruit/public/client-home.html">Client Dashboard</a>
+  </nav>
+
+  <!-- Storefront container -->
+  <div class="container">
+    <p>
+      Browse our fresh organic tropical fruits from around the world.
+      Let your tastebuds explore.
+      Which tropical fruit are you
+    </p>
+
+    <!-- Fruit items are injected here dynamically -->
+    <div id="fruit-list"></div>
+
+    <!-- Button to navigate to the shopping cart -->
+    <button id="view-cart-btn" onclick="viewCart()">View Cart</button>
+  </div>
+
+  <!-- Storefront functionality -->
+  <script src="script.js"></script>
+</body>
+</html>
