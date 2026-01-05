@@ -1,0 +1,289 @@
+/* Base page layout and background image */
+body {
+  font-family: Gill Sans, sans-serif;
+  background-image: url('images/tropical-fruits-image2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Main page heading */
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Primary content container */
+.container {
+  background-color: rgba(43, 130, 114, 0.9);
+  border: 2px solid rgba(43, 130, 114, 0.9);
+  border-radius: 8px;
+  padding: 20px 30px;
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Fruit list wrapper */
+#fruit-list {
+  margin: 20px auto;
+  width: 100%;
+}
+
+/* Individual fruit card */
+.fruit {
+  background-color: #ffffffd8;
+  border: 1px solid rgba(9, 98, 83, 0.25);
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  max-width: 700px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Global button styling */
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Cart item list */
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Shared text alignment */
+p,
+h2,
+button {
+  text-align: center;
+}
+
+/* Fruit information layout */
+.fruit-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Fruit thumbnail image */
+.fruit-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Delete action button */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 8px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Quantity selector */
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.quantity button {
+  background-color: #096253;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 8px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.quantity button:hover {
+  background-color: #074b3e;
+}
+
+/* Fruit details button */
+.details-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.details-btn:hover {
+  background-color: #0056b3;
+}
+
+/* View cart button */
+#view-cart-btn {
+  background-color: #ffc107;
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+#view-cart-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Cart page layout */
+body.cart-page {
+  background-color: #ffffff;
+  color: #333;
+  font-family: Gill Sans, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Cart container */
+.cart-container {
+  background-color: #fff;
+  border: 2px solid rgba(0, 128, 0, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Button hover animation */
+button,
+.continue {
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.continue:hover {
+  transform: scale(1.05);
+}
+
+/* Fruit detail image */
+.fruit-detail img {
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Cart page images */
+#cart-items img {
+  width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Fruit detail page container */
+.fruit-detail {
+  background-color: #fff;
+  border: 2px solid rgba(0, 128, 0, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  width: 80%;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.fruit-detail h1 {
+  color: #096253;
+  margin-bottom: 10px;
+}
+
+.fruit-detail p {
+  font-size: 2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Top navigation links */
+.top-nav {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
+  background-color: #096253;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #064a3f;
+}
+
+.top-nav a:hover {
+  background-color: #0b7e69;
+}
+
+/* Admin navigation link */
+.admin-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.admin-link a {
+  background: none;
+  color: #064a3f;
+  font-size: 1rem;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.admin-link a:hover {
+  opacity: 1;
+  color: #0b7e69;
+}
