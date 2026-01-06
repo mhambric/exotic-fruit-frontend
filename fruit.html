@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup and mobile layout support -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title -->
+  <title>Fruit Details</title>
+
+  <!-- Shared application styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Dynamic fruit name heading -->
+  <h1 id="fruit-title"></h1>
+
+  <!-- Fruit details container -->
+  <div class="fruit-detail">
+    <!-- Fruit image loaded dynamically -->
+    <img id="fruit-img" src="" alt="">
+
+    <!-- Price information -->
+    <p id="fruit-price"></p>
+
+    <!-- Description text -->
+    <p id="fruit-desc"></p>
+
+    <!-- Navigation back to storefront -->
+    <button onclick="window.location.href='index.html'">Back to Shop</button>
+  </div>
+
+  <!-- Fruit detail logic -->
+  <script src="fruit.js"></script>
+</body>
+</html>
