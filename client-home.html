@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page setup -->
   <meta charset="UTF-8">
   <title>Client Dashboard | Exotic Fruits</title>
 
+  <!-- Custom font for headings -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Shared application styles -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Page specific layout styles -->
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background: #f5f9f7;
       padding: 20px;
     }
@@ -38,7 +43,7 @@
     }
 
     .card h3 {
-      margin: 0 0 10px 0;
+      margin-bottom: 10px;
       color: #096253;
     }
 
@@ -64,7 +69,7 @@
     .back-btn {
       margin-top: 30px;
       display: block;
-      width: 150px;
+      width: 170px;
       text-align: center;
       background-color: #096253;
       color: white;
@@ -83,72 +88,82 @@
 
 <body>
 
+  <!-- Dashboard heading -->
   <h1>Client Dashboard</h1>
 
+  <!-- Management feature grid -->
   <div class="grid">
 
+    <!-- Product management -->
     <div class="card">
-      <h3>View & Add Products</h3>
-      <p>Add new fruit items or view your current store inventory.</p>
+      <h3>View and Add Products</h3>
+      <p>Add new fruit items or view current inventory.</p>
       <button onclick="location.href='view-and-add-products.html'">Open</button>
     </div>
 
     <div class="card">
       <h3>Update Product</h3>
-      <p>Edit an existing product’s details such as price, or catagory.</p>
+      <p>Edit existing product details such as price or category.</p>
       <button onclick="location.href='update-product.html'">Open</button>
     </div>
 
     <div class="card">
       <h3>Delete Products</h3>
-      <p>Remove outdated or unavailable products from your system.</p>
+      <p>Remove outdated or unavailable products.</p>
       <button onclick="location.href='delete-product.html'">Open</button>
     </div>
 
+    <!-- Customer management -->
     <div class="card">
       <h3>Manage Customers</h3>
-      <p>View and Add customer records.</p>
+      <p>View and add customer records.</p>
       <button onclick="location.href='manage-customers.html'">Open</button>
     </div>
 
+    <!-- Order management -->
     <div class="card">
       <h3>Manage Orders</h3>
-      <p>View, create, update, or remove order records.</p>
+      <p>View, create, update, or remove orders.</p>
       <button onclick="location.href='manage-orders.html'">Open</button>
     </div>
 
+    <!-- Category management -->
     <div class="card">
       <h3>Categories</h3>
-      <p>View and Delte catagories of products.</p>
+      <p>View and delete product categories.</p>
       <button onclick="location.href='categories.html'">Open</button>
     </div>
 
-    <button id="resetBtn">RESET DATABASE</button>
+    <!-- Database reset action -->
+    <button id="resetBtn">Reset Database</button>
   </div>
 
-  <a href="index.html" class="back-btn"> Back to Store Front</a>
+  <!-- Navigation back to storefront -->
+  <a href="index.html" class="back-btn">Back to Store Front</a>
 
-<script>
+  <!-- Backend interaction logic -->
+  <script>
     const API_BASE = "http://classwork.engr.oregonstate.edu:7788";
 
-    // RESET DATABASE BUTTON FUNCTION
+    // Reset database to sample data
     document.getElementById("resetBtn").addEventListener("click", async () => {
       try {
-        const res = await fetch(`${API_BASE}/procedures/reset-tables`, { method: "POST" });
+        const res = await fetch(`${API_BASE}/procedures/reset-tables`, {
+          method: "POST"
+        });
+
         if (res.ok) {
-          alert(" Database has been reset to original sample data!");
+          alert("Database has been reset to original sample data.");
           location.reload();
         } else {
-          alert("Error resetting database,check backend connection.");
+          alert("Unable to reset database. Please check backend connection.");
         }
-      } catch (err) {
-        console.error("Error resetting database:", err);
-        alert(" An error occurred while trying to reset the database.");
+      } catch (error) {
+        console.error("Database reset error:", error);
+        alert("An error occurred while attempting to reset the database.");
       }
-      
     });
   </script>
-
 
 </body>
 </html>
