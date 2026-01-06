@@ -12,9 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <!-- Shared application styles -->
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="scripts/script.js"></script>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -26,7 +24,7 @@
     <a href="client-home.html">Client Dashboard</a>
   </nav>
 
-  <!-- Storefront container -->
+  <!-- Storefront content container -->
   <div class="container">
     <p>
       Browse our fresh organic tropical fruits from around the world.
@@ -34,14 +32,15 @@
       Which tropical fruit are you
     </p>
 
-    <!-- Fruit items are injected here dynamically -->
+    <!-- Fruit cards are injected here dynamically by JavaScript -->
     <div id="fruit-list"></div>
 
     <!-- Button to navigate to the shopping cart -->
     <button id="view-cart-btn" onclick="viewCart()">View Cart</button>
   </div>
 
-  <!-- Storefront functionality -->
+  <!-- Storefront functionality and dynamic rendering -->
   <script src="script.js"></script>
 </body>
 </html>
+>
