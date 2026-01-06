@@ -1,0 +1,181 @@
+<!--
+  File: client-home.html
+  Author: Maritza Hambric
+  Date: December 8th 2025
+
+  Citation for use of AI Tools:
+  Date of AI Assistance: Dec 8th 2025
+  Prompts used:
+    "Help me center the client dashboard grid layout."
+    "Fix styling for the dashboard cards and navigation buttons."
+    "Assist with writing the reset database button fetch() logic."
+    "Explain how to structure the HTML for the Client Dashboard."
+
+  AI Source URL: https://chat.openai.com
+
+  Description of Assistance:
+  ChatGPT was used to provide guidance on CSS layout organization,
+  improving grid alignment, refining button styling, and clarifying 
+  JavaScript logic for the reset database functionality. All assistance 
+  consisted of explanations or example structural patterns. 
+
+  Originality Statement:
+  All final HTML, CSS, and JavaScript code in this file was reviewed,
+  verified, and authored by Maritza Hambric. This file is my own original work.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Dashboard | Exotic Fruits</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f5f9f7;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: "Pacifico", cursive;
+      color: #b06400;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      border-left: 6px solid #b06400;
+      box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin: 0 0 10px 0;
+      color: #096253;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    .card button {
+      padding: 10px 16px;
+      background-color: #b06400;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #c67a14;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      display: block;
+      width: 150px;
+      text-align: center;
+      background-color: #096253;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .back-btn:hover {
+      background-color: #0b7e69;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Client Dashboard</h1>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>View & Add Products</h3>
+      <p>Add new fruit items or view your current store inventory.</p>
+      <button onclick="location.href='view-and-add-products.html'">Open</button>
+    </div>
+
+    <div class="card">
+      <h3>Update Product</h3>
+      <p>Edit an existing product’s details such as price, or catagory.</p>
+      <button onclick="location.href='update-product.html'">Open</button>
+    </div>
+
+    <div class="card">
+      <h3>Delete Products</h3>
+      <p>Remove outdated or unavailable products from your system.</p>
+      <button onclick="location.href='delete-product.html'">Open</button>
+    </div>
+
+    <div class="card">
+      <h3>Manage Customers</h3>
+      <p>View and Add customer records.</p>
+      <button onclick="location.href='manage-customers.html'">Open</button>
+    </div>
+
+    <div class="card">
+      <h3>Manage Orders</h3>
+      <p>View, create, update, or remove order records.</p>
+      <button onclick="location.href='manage-orders.html'">Open</button>
+    </div>
+
+    <div class="card">
+      <h3>Categories</h3>
+      <p>View and Delte catagories of products.</p>
+      <button onclick="location.href='categories.html'">Open</button>
+    </div>
+
+    <button id="resetBtn">RESET DATABASE</button>
+  </div>
+
+  <a href="index.html" class="back-btn"> Back to Store Front</a>
+
+<script>
+    const API_BASE = "http://classwork.engr.oregonstate.edu:7788";
+
+    // RESET DATABASE BUTTON FUNCTION
+    document.getElementById("resetBtn").addEventListener("click", async () => {
+      try {
+        const res = await fetch(`${API_BASE}/procedures/reset-tables`, { method: "POST" });
+        if (res.ok) {
+          alert(" Database has been reset to original sample data!");
+          location.reload();
+        } else {
+          alert("Error resetting database,check backend connection.");
+        }
+      } catch (err) {
+        console.error("Error resetting database:", err);
+        alert(" An error occurred while trying to reset the database.");
+      }
+      
+    });
+  </script>
+
+
+</body>
+</html>
