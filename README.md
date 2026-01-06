@@ -30,18 +30,15 @@ This frontend is intentionally built without a live backend to clearly showcase 
 
 frontend/
 │
-├── public/
-│ ├── index.html
-│ ├── cart.html
-│ ├── fruit.html
+├── index.html
+│── cart.html
+│── fruit.html
 │
-├── scripts/
-│ ├── script.js
-│ ├── cart.js
-│ ├── fruit.js
+│── script.js
+│── cart.js
+│── fruit.js
 │
-├── styles/
-│ └── style.css
+│── style.css
 │
 ├── images/
 │ └── fruit images
