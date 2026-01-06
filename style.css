@@ -268,22 +268,29 @@ button:hover,
   background-color: #0b7e69;
 }
 
-/* Admin navigation link */
-.admin-link {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+/* Client dashboard access link */
+.dashboard-link {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.admin-link a {
-  background: none;
-  color: #064a3f;
-  font-size: 1rem;
-  text-decoration: underline;
-  opacity: 0.8;
+.dashboard-link a {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #096253;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #096253;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.admin-link a:hover {
-  opacity: 1;
-  color: #0b7e69;
+.dashboard-link a:hover {
+  background-color: #096253;
+  color: #ffffff;
 }
+
+
+

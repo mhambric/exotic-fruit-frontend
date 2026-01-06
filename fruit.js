@@ -48,4 +48,3 @@ function loadFruitDetails() {
 
 // Initialize fruit detail view on page load
 loadFruitDetails();
-
